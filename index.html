@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#A9843C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="MALLWI">
+<link rel="apple-touch-icon" href="imgs/brand.png">
+<title>MALLWI BRAND</title>
+<meta name="description" content="MALLWI BRAND — متجر ملابس رجالي وحريمي">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a href="index.html" class="brand-block">
+      <img src="imgs/brand.png" class="brand-logo-img" alt="MALLWI BRAND" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-logo-fallback',innerHTML:'<i class=\'fa-solid fa-crown\'></i>'}))">
+      <span class="brand-name">MALLWI<small>B R A N D</small></span>
+    </a>
+    <div class="nav-actions">
+      <button class="icon-btn" title="الوضع الليلي/النهاري" onclick="toggleTheme()">
+        <i id="theme-icon" class="fa-solid fa-sun"></i>
+      </button>
+      <button class="icon-btn" title="السلة" onclick="openCart()">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="icon-btn install-btn" id="install-btn" title="تثبيت التطبيق" onclick="installApp()">
+        <i class="fa-solid fa-arrow-down-to-bracket"></i>
+      </button>
+      <button class="icon-btn hamburger" title="القائمة" onclick="toggleMobileNav(event)"><i class="fa-solid fa-bars"></i></button>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+        <li><a href="men.html"><i class="fa-solid fa-shirt"></i> رجالي</a></li>
+        <li><a href="women.html"><i class="fa-solid fa-gem"></i> حريمي</a></li>
+        <li><a href="#contact"><i class="fa-brands fa-whatsapp"></i> اتصل بنا</a></li>
+        <li><a href="#" id="nav-install-link" onclick="installApp();return false;"><i class="fa-solid fa-arrow-down-to-bracket"></i> تحميل التطبيق</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div id="home-view">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="hero-eyebrow">MALLWI BRAND</span>
+    <h1 class="disp">تسوّق قطعتك المفضلة<br>بسهولة من مكانك</h1>
+    <p>ملابس رجالي وحريمي مختارة بعناية، وطلبك يوصلك بسرعة وبساطة.</p>
+    <div class="hero-btns">
+      <a href="men.html" class="btn btn-gold"><i class="fa-solid fa-shirt"></i> تسوّق رجالي</a>
+      <a href="women.html" class="btn btn-line"><i class="fa-solid fa-gem"></i> تسوّق حريمي</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="cat-grid reveal">
+      <a href="men.html" class="cat-card">
+        <i class="fa-solid fa-shirt"></i>
+        <div class="cat-title">المجموعة الرجالية</div>
+        <span class="cat-cta">تسوّق الآن <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+      <a href="women.html" class="cat-card">
+        <i class="fa-solid fa-gem"></i>
+        <div class="cat-title">المجموعة النسائية</div>
+        <span class="cat-cta">تسوّق الآن <i class="fa-solid fa-arrow-left"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">مختارات</span>
+      <h2 class="disp">من أحدث القطع</h2>
+    </div>
+    <div class="product-grid reveal" id="teaser-grid"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="trust-strip reveal">
+      <div class="trust-item"><i class="fa-solid fa-truck-fast"></i><span>شحن لكل المحافظات</span></div>
+      <div class="trust-item"><i class="fa-solid fa-hand-holding-dollar"></i><span>الدفع عند الاستلام</span></div>
+      <div class="trust-item"><i class="fa-solid fa-rotate-left"></i><span>استبدال سهل</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">آراء عملائنا</span>
+      <h2 class="disp">اللي جربونا بيقولوا إيه</h2>
+    </div>
+    <div class="testi-grid reveal">
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">أح</div>
+          <div>
+            <div class="testi-name">أحمد جمال</div>
+            <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+        </div>
+        <p class="testi-text">والله يا جماعة الشحن وصل بسرعة جدًا والخامة أحسن من اللي كنت متوقعه، هطلب تاني أكيد 👌</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">من</div>
+          <div>
+            <div class="testi-name">منى عبد الله</div>
+            <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+        </div>
+        <p class="testi-text">تعامل محترم جدًا والرد على الواتساب سريع، الفستان اللي طلبته زي الصورة بالظبط 🌸</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">كر</div>
+          <div>
+            <div class="testi-name">كريم الشريف</div>
+            <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+          </div>
+        </div>
+        <p class="testi-text">جربت أطلب أول مرة وكنت خايف شوية بس الدفع عند الاستلام طمنني، والقطعة جامدة فعلاً 🔥</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-top">
+          <div class="testi-avatar">سا</div>
+          <div>
+            <div class="testi-name">سارة حسن</div>
+            <div class="testi-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          </div>
+        </div>
+        <p class="testi-text">أول مرة أشتري أونلاين وأحس إن اللي في الصورة هو اللي هيوصلني فعلاً، تسلموا 🤍</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /home-view -->
+
+<div id="order-view" style="display:none;">
+  <section class="page-hero" style="padding-bottom:0;">
+    <div class="wrap">
+      <span class="eyebrow">MALLWI BRAND</span>
+      <h1 class="disp">إتمام الطلب</h1>
+      <p>خطوة واحدة كمان وطلبك في الطريق إليك</p>
+    </div>
+  </section>
+
+  <div class="wrap order-steps" id="order-steps">
+    <div class="o-step" data-step="1"><span class="o-dot">1</span> السلة</div>
+    <div class="o-sep"></div>
+    <div class="o-step" data-step="2"><span class="o-dot">2</span> البيانات</div>
+    <div class="o-sep"></div>
+    <div class="o-step" data-step="3"><span class="o-dot">3</span> التأكيد</div>
+  </div>
+
+  <section class="order-page" style="padding-top:6px;">
+    <div class="wrap" id="order-body"></div>
+  </section>
+
+  <div class="wrap" style="padding-bottom:10px;">
+    <a href="#" onclick="showHomeView();return false;" class="btn btn-line btn-full"><i class="fa-solid fa-arrow-right"></i> الرجوع للتسوق</a>
+  </div>
+</div><!-- /order-view -->
+
+<footer class="site-footer" id="contact">
+  <div class="wrap">
+    <div class="footer-brand">
+      <img src="imgs/brand.png" class="brand-logo-img" alt="" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'brand-logo-fallback',innerHTML:'<i class=\'fa-solid fa-crown\'></i>'}))">
+      <span class="disp gold">MALLWI BRAND</span>
+    </div>
+    <p class="footer-text">وجهتك للملابس الرجالية والنسائية. اطلب اللي يعجبك وهيوصلك بسهولة.</p>
+    <span class="contact-label">تواصل معنا</span>
+    <div class="social-row">
+      <a href="https://wa.me/201202226786" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i> واتساب</a>
+      <a href="https://www.facebook.com/share/191ktEQjEC/" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i> فيسبوك</a>
+      <a href="https://t.me/mallwi.brand" target="_blank" title="تليجرام"><i class="fa-brands fa-telegram"></i> تليجرام</a>
+    </div>
+    <div class="footer-links">
+      <a href="men.html">رجالي</a>
+      <a href="women.html">حريمي</a>
+      <a href="https://wa.me/201202226786" target="_blank">01202226786</a>
+    </div>
+
+    <div class="dev-profile">
+      <img src="imgs/profile.jpg" class="dev-photo" alt="Youssef Sobhy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'dev-photo-fallback',innerHTML:'<i class=\'fa-solid fa-user\'></i>'}))">
+      <div class="dev-info">
+        <span class="dev-badge">المؤسس والمدير العام</span>
+        <div class="dev-name">YOUSSEF SOBHY</div>
+        <div class="dev-links">
+          <a href="https://wa.me/201202226786" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" target="_blank" title="فيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">© 2026 MALLWI BRAND — Developed by YOUSSEF SOBHY</div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/201202226786?text=أهلاً،%20أنا%20مهتم%20بمنتجات%20MALLWI%20BRAND" target="_blank" title="راسلنا على واتساب">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<div id="toast"></div>
+
+<!-- سلة التسوق -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cart-drawer">
+  <div class="cart-head">
+    <h3 class="disp">سلتك</h3>
+    <button class="icon-btn" onclick="closeCart()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="cart-items" id="cart-items"></div>
+  <div class="cart-foot" id="cart-foot" style="display:none;">
+    <div class="min-warn" id="min-warn">⚠️ الحد الأدنى للطلب قطعتان</div>
+    <div class="coupon-row">
+      <input type="text" id="coupon-input" placeholder="كود الخصم">
+      <button onclick="applyCoupon()">تفعيل</button>
+    </div>
+    <div class="coupon-msg" id="coupon-msg"></div>
+    <div class="sum-row"><span>الإجمالي الفرعي</span><span id="sum-subtotal">0 ج.م</span></div>
+    <div class="sum-row"><span>مصاريف الشحن</span><span id="sum-shipping">30 ج.م</span></div>
+    <div class="sum-total"><span>الإجمالي النهائي</span><span id="sum-total">0 ج.م</span></div>
+    <button class="btn btn-gold btn-full" id="checkout-btn" onclick="tryCheckout()">إتمام الطلب</button>
+  </div>
+</div>
+
+<!-- نافذة تحميل التطبيق -->
+<div class="install-overlay" id="install-overlay">
+  <div class="install-card" id="install-card">
+    <button class="install-close" onclick="closeInstallModal()"><i class="fa-solid fa-xmark"></i></button>
+    <img src="imgs/brand.png" class="install-logo" alt="MALLWI BRAND" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'install-logo-fallback',innerHTML:'<i class=\'fa-solid fa-crown\'></i>'}))">
+    <h3 class="disp">حمّل تطبيق MALLWI BRAND</h3>
+    <p>تسوّق أسرع، وصول فوري للعروض، وتجربة استخدام أحلى من غير متصفح</p>
+    <div class="install-actions">
+      <button class="btn btn-gold btn-full" onclick="installApp()"><i class="fa-solid fa-arrow-down-to-bracket"></i> تثبيت التطبيق الآن</button>
+      <button class="install-later" onclick="closeInstallModal()">لاحقًا</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script>
+const teaserProducts = [
+  {"id":101,"name":"تيشرت رجالي كلاسيك","price":250,"category":"men","isNew":true},
+  {"id":204,"name":"حقيبة يد فاخرة","price":560,"category":"women","isNew":true},
+  {"id":103,"name":"جاكيت جلد رجالي","price":850,"category":"men","isNew":true},
+  {"id":201,"name":"فستان سواريه ذهبي","price":780,"category":"women","isNew":true}
+];
+
+function renderTeaser(){
+  const grid = document.getElementById('teaser-grid');
+  grid.innerHTML = teaserProducts.map(p=>{
+    const d = fakeDiscount(p.id, p.price);
+    const link = p.category === 'men' ? 'men.html' : 'women.html';
+    return `
+    <a href="${link}" class="p-card">
+      <div class="p-media">
+        <img src="${productImageUrl(p.id)}" onerror="imgFallback(this, ${p.id})" alt="${p.name}" loading="lazy">
+        <div class="p-badges">${p.isNew?'<span class="badge badge-new">جديد</span>':''}<span class="badge badge-off">-${d.pct}%</span></div>
+        <div class="soon-tag"><i class="fa-regular fa-clock"></i> الصورة توضيحية · سيتوفر قريبًا</div>
+      </div>
+      <div class="p-body">
+        <div class="p-name">${p.name}</div>
+        <div class="p-price-row">
+          <span class="p-price">${p.price} ج.م</span>
+          <span class="p-price-old">${d.old} ج.م</span>
+        </div>
+      </div>
+    </a>`;
+  }).join('');
+}
+renderTeaser();
+</script>
+</body>
+</html>
